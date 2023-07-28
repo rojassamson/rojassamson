@@ -1,0 +1,32 @@
+header {
+    display: grid;
+    margin: 5px;
+    .contenedorHeader {
+        order: 1;
+        width: 100%;
+        min-height: 5vh;
+        background-color: $colorPrimario !important;
+        border-radius: 15px;
+        margin-bottom: 5px;
+        nav {
+            height: 100%;
+        }
+    }
+
+    .ajusteHeader {
+        display: flex;
+        justify-content: end;
+
+        ul {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+footer {
+    margin: 5px !important;
+    background-color: $colorPrimario;
+    border-radius: 15px;
+}

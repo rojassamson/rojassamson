@@ -1,0 +1,159 @@
+.contenedorHeading {
+    order: 2;
+    height: 85vh;
+    position: relative;
+
+    .backgroundSobreVideo {
+        width: 100%;
+        height: 100%;
+        background-color: $colorPrimarioTraslucido;
+        z-index: 2;
+        position: absolute;
+        border-radius: 15px;
+    }
+
+    video {
+        border-radius: 15px;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+    }
+    
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);//centra el elemento
+        z-index: 3;
+    }
+
+    h2 {
+        background-color: $colorSecundarioTraslucido;
+        border-radius: 5px;
+        box-shadow: 0 0 10px $colorSecundario;
+        color: $colorFuenteFondoOscuro;
+    }
+}
+
+main {
+    margin: 5px 5px !important;
+    border-radius: 15px;
+
+    justify-content: center;
+
+    .contenedorBienvenidaMain {
+        position: relative;
+        height: 90vh;
+
+        .backgroundSobreVideo--main {
+            width: 100%;
+            height: 100%;
+            background-color: $colorTerciarioTraslucido;
+            z-index: 2;
+            position: absolute;
+            border-radius: 15px;
+        }
+
+        video {
+            border-radius: 15px;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+        }
+
+        div {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);//centra el elemento
+            z-index: 3;
+            background-color: $colorSecundarioTraslucido;
+            box-shadow: 0 0 10px $colorSecundario;
+            border-radius: 15px;
+            color: $colorFuenteFondoOscuro;
+            padding: 10px;
+
+            a {
+                padding: 3px;
+                background-color: $colorTerciarioTraslucido;
+                text-decoration: none;
+                border-radius: 5px;
+                color: $colorFuenteFondoOscuro;
+                box-shadow: 0 0 5px $colorTerciarioTraslucido;
+                display: flex;
+                justify-content: center;
+
+                transition: all 0.5s;
+
+                &:hover {
+                    transform: scale(1.1);
+                    box-shadow: 0 0 20px $colorFuenteFondoOscuro;
+                }
+            }
+        }
+    }
+
+    .contenedorInfoMain {
+        padding-top: 10px;
+        border-radius: 15px;
+        margin: 10px 0 0 0;
+        background-color: $colorTerciario;
+
+        .contenedorTecnologias {
+            padding-top: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+    
+            .contenidoTecnologias {
+                margin: 0 auto;
+                height: 300px;
+                width: 300px;
+                padding: 10px;
+                background: linear-gradient(to bottom, white, gray);
+                border: 1px solid $colorSecundario;
+                box-shadow: 0 0 5px $colorSecundario;
+                border-radius: 15px;
+                transition: all 0.5s;
+    
+                &:hover {
+                    transform: scale(1.1);
+                }
+    
+    
+                p {
+                    height: 10%;
+                    font-weight: 700;
+                }
+                p:last-of-type {
+                    text-align: end;
+                }
+                img {
+                    padding: 5px;
+                    height: 80%;
+                    width: auto;
+                    margin: 0 auto !important;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+    
+        }
+
+    }
+
+}
+
