@@ -1,6 +1,6 @@
 header {
     display: grid;
-    margin: 5px;
+    margin: 20px;
     .contenedorNav {
         width: 100%;
         height: 100%;
@@ -19,7 +19,60 @@ header {
 }
 
 footer {
-    margin: 5px !important;
-    background-color: $colorPrimario;
+    margin: 20px !important;
+    height: 40vh;
+    background-color: $colorTerciario;
     border-radius: 15px;
+    position: relative;
+
+    .backgroundSobreVideo--footer {
+        width: 100%;
+        height: 100%;
+        background-color: $colorPrimarioTraslucido;
+        z-index: 2;
+        position: absolute;
+        border-radius: 15px;
+    }
+
+    video {
+        border-radius: 15px;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+    }
+
+    .container {
+        z-index: 3;
+        position: absolute !important;
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%, -50%);
+    }
+
+
+    a {
+        text-decoration: none;
+        color: $colorSecundario;
+
+    }
+
+    .gridFooter {
+        display: grid; 
+        grid-template-columns: 2fr 4fr 4fr;
+        
+        .redesSociales {
+            border-right: 2px solid $colorSecundario;
+            a {
+                display: inline-flex;
+                padding: 15px;
+                transition: all 0.5s;
+
+                &:hover {
+                    transform: scale(1.5);
+                }
+            }
+        }
+    }
 }
