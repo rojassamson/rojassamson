@@ -341,7 +341,7 @@ template {
 
 header {
   display: grid;
-  margin: 5px; }
+  margin: 20px; }
   header .contenedorNav {
     width: 100%;
     height: 100%; }
@@ -354,9 +354,45 @@ header {
       justify-content: space-between; }
 
 footer {
-  margin: 5px !important;
-  background-color: #2ea7df;
-  border-radius: 15px; }
+  margin: 20px !important;
+  height: 40vh;
+  background-color: #c73d3d;
+  border-radius: 15px;
+  position: relative; }
+  footer .backgroundSobreVideo--footer {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 167, 223, 0.39);
+    z-index: 2;
+    position: absolute;
+    border-radius: 15px; }
+  footer video {
+    border-radius: 15px;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute; }
+  footer .container {
+    z-index: 3;
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  footer a {
+    text-decoration: none;
+    color: black; }
+  footer .gridFooter {
+    display: grid;
+    grid-template-columns: 2fr 4fr 4fr; }
+    footer .gridFooter .redesSociales {
+      border-right: 2px solid black; }
+      footer .gridFooter .redesSociales a {
+        display: inline-flex;
+        padding: 15px;
+        transition: all 0.5s; }
+        footer .gridFooter .redesSociales a:hover {
+          transform: scale(1.5); }
 
 .contenedorHeader {
   height: 95vh;
@@ -370,6 +406,14 @@ footer {
     align-items: center;
     border-radius: 15px;
     background: linear-gradient(to bottom, #2ea7df, rgba(46, 167, 223, 0)); }
+    .contenedorHeader .contenidoNav a {
+      border-radius: 15px;
+      padding: 5px;
+      border: 1px solid black;
+      font-weight: 700;
+      transition: all 0.5s; }
+      .contenedorHeader .contenidoNav a:hover {
+        transform: scale(1.1); }
   .contenedorHeader .backgroundSobreVideo {
     width: 100%;
     height: 100%;
@@ -401,9 +445,11 @@ footer {
     color: white; }
 
 main {
-  margin: 5px 5px !important;
+  margin: 20px !important;
   border-radius: 15px;
   justify-content: center; }
+  main h3:last-of-type {
+    padding-bottom: 20px; }
   main .contenedorBienvenidaMain {
     position: relative;
     height: 90vh; }
@@ -451,38 +497,71 @@ main {
   main .contenedorInfoMain {
     padding-top: 10px;
     border-radius: 15px;
-    margin: 10px 0 0 0;
+    margin: 20px 0 0 0;
     background-color: #c73d3d; }
     main .contenedorInfoMain .contenedorTecnologias {
       padding-top: 10px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 20px; }
-      main .contenedorInfoMain .contenedorTecnologias .contenidoTecnologias {
-        margin: 0 auto;
-        height: 300px;
-        width: 300px;
-        padding: 10px;
-        background: linear-gradient(to bottom, white, gray);
-        border: 1px solid black;
-        box-shadow: 0 0 5px black;
-        border-radius: 15px;
-        transition: all 0.5s; }
-        main .contenedorInfoMain .contenedorTecnologias .contenidoTecnologias:hover {
-          transform: scale(1.1); }
-        main .contenedorInfoMain .contenedorTecnologias .contenidoTecnologias p {
-          height: 10%;
-          font-weight: 700; }
-        main .contenedorInfoMain .contenedorTecnologias .contenidoTecnologias p:last-of-type {
-          text-align: end; }
-        main .contenedorInfoMain .contenedorTecnologias .contenidoTecnologias img {
-          padding: 5px;
-          height: 80%;
-          width: auto;
-          margin: 0 auto !important;
-          display: flex;
-          justify-content: center;
-          align-items: center; }
+      main .contenedorInfoMain .contenedorTecnologias .gridTecnologias {
+        display: flex;
+        padding: 100px 20px;
+        margin: 70px 0;
+        border-radius: 15px; }
+        main .contenedorInfoMain .contenedorTecnologias .gridTecnologias:nth-child(1) {
+          background-image: url("../assets/img/components.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          border: 1px solid black;
+          box-shadow: inset 0 0 30px black; }
+        main .contenedorInfoMain .contenedorTecnologias .gridTecnologias:nth-child(2) {
+          background-image: url("../assets/img/motherboard.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          border: 1px solid black;
+          box-shadow: inset 0 0 30px black; }
+        main .contenedorInfoMain .contenedorTecnologias .gridTecnologias:nth-child(3) {
+          background-image: url("../assets/img/codescreen.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          border: 1px solid black;
+          box-shadow: inset 0 0 30px black; }
+        main .contenedorInfoMain .contenedorTecnologias .gridTecnologias:nth-child(4) {
+          background-image: url("../assets/img/gears.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          border: 1px solid black;
+          box-shadow: inset 0 0 30px black; }
+        main .contenedorInfoMain .contenedorTecnologias .gridTecnologias .contenidoTecnologias {
+          margin: 0 auto;
+          height: 300px;
+          width: 300px;
+          padding: 10px;
+          background: linear-gradient(to bottom, rgba(255, 255, 255, 0.836), rgba(128, 128, 128, 0.836));
+          border: 1px solid black;
+          box-shadow: 0 0 20px black;
+          border-radius: 15px;
+          transition: all 0.5s; }
+          main .contenedorInfoMain .contenedorTecnologias .gridTecnologias .contenidoTecnologias:hover {
+            transform: scale(1.1); }
+          main .contenedorInfoMain .contenedorTecnologias .gridTecnologias .contenidoTecnologias p {
+            height: 10%;
+            font-weight: 700; }
+          main .contenedorInfoMain .contenedorTecnologias .gridTecnologias .contenidoTecnologias p:last-of-type {
+            text-align: end; }
+          main .contenedorInfoMain .contenedorTecnologias .gridTecnologias .contenidoTecnologias img {
+            padding: 5px;
+            height: 80%;
+            width: auto;
+            margin: 0 auto !important;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
 
 @media (max-width: 991px) {
   .ajusteHeader {
