@@ -1,7 +1,17 @@
-.contenedorHeading {
-    order: 2;
-    height: 85vh;
+.contenedorHeader {
+    height: 95vh;
     position: relative;
+
+    .contenidoNav {
+        width: 100%;
+        min-height: 10%;
+        position: absolute;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        border-radius: 15px;
+        background: linear-gradient(to bottom, rgba(46, 167, 223, 1), rgba(46, 167, 223, 0));
+    }
 
     .backgroundSobreVideo {
         width: 100%;
@@ -22,7 +32,7 @@
     }
     
 
-    div {
+    .centrarHeading {
         display: flex;
         justify-content: center;
         align-items: center;

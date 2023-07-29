@@ -1,16 +1,9 @@
 header {
     display: grid;
     margin: 5px;
-    .contenedorHeader {
-        order: 1;
+    .contenedorNav {
         width: 100%;
-        min-height: 5vh;
-        background-color: $colorPrimario !important;
-        border-radius: 15px;
-        margin-bottom: 5px;
-        nav {
-            height: 100%;
-        }
+        height: 100%;
     }
 
     .ajusteHeader {

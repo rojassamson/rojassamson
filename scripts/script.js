@@ -1,5 +1,5 @@
 const templateHeader = document.createElement("div");
-templateHeader.setAttribute("class", "contenedorHeader")
+templateHeader.setAttribute("class", "contenedorNav")
 templateHeader.innerHTML = `
 <nav class="navbar navbar-expand-lg">
   <div class="container">
@@ -68,7 +68,7 @@ templateFooter.innerHTML = `
 </div>
 
 `
-const contenidoHeader = document.querySelector(".contenidoHeader");
+const contenidoHeader = document.querySelector(".contenidoNav");
 contenidoHeader.appendChild(templateHeader);
 
 const contenidoFooter = document.querySelector(".contenidoFooter");
