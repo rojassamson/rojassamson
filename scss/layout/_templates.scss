@@ -20,7 +20,7 @@ header {
 
 footer {
     margin: 20px !important;
-    height: 40vh;
+    height: 30vh;
     background-color: $colorTerciario;
     border-radius: 15px;
     position: relative;
@@ -60,18 +60,29 @@ footer {
 
     .gridFooter {
         display: grid; 
-        grid-template-columns: 2fr 4fr 4fr;
+        grid-template-columns: 1fr 1fr;
+        margin: 10px 0;
         
         .redesSociales {
             border-right: 2px solid $colorSecundario;
-            a {
-                display: inline-flex;
-                padding: 15px;
-                transition: all 0.5s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: end;
+            padding-right: 20px;
+        }
 
-                &:hover {
-                    transform: scale(1.5);
-                }
+        .pagesFooter {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-left: 20px;
+
+            a:first-of-type {
+                padding-top: 20px;
+            }
+            a:last-of-type {
+                padding-bottom: 20px;
             }
         }
     }
