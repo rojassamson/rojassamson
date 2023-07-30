@@ -355,7 +355,7 @@ header {
 
 footer {
   margin: 20px !important;
-  height: 40vh;
+  height: 30vh;
   background-color: #c73d3d;
   border-radius: 15px;
   position: relative; }
@@ -384,15 +384,24 @@ footer {
     color: black; }
   footer .gridFooter {
     display: grid;
-    grid-template-columns: 2fr 4fr 4fr; }
+    grid-template-columns: 1fr 1fr;
+    margin: 10px 0; }
     footer .gridFooter .redesSociales {
-      border-right: 2px solid black; }
-      footer .gridFooter .redesSociales a {
-        display: inline-flex;
-        padding: 15px;
-        transition: all 0.5s; }
-        footer .gridFooter .redesSociales a:hover {
-          transform: scale(1.5); }
+      border-right: 2px solid black;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: end;
+      padding-right: 20px; }
+    footer .gridFooter .pagesFooter {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-left: 20px; }
+      footer .gridFooter .pagesFooter a:first-of-type {
+        padding-top: 20px; }
+      footer .gridFooter .pagesFooter a:last-of-type {
+        padding-bottom: 20px; }
 
 .contenedorHeader {
   height: 95vh;
@@ -448,6 +457,25 @@ main {
   margin: 20px !important;
   border-radius: 15px;
   justify-content: center; }
+  main .botonVolverArriba {
+    position: fixed;
+    top: 85%;
+    right: 5%;
+    z-index: 9;
+    text-decoration: none;
+    display: flex;
+    background-color: #c73d3d;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.49);
+    padding: 15px;
+    color: black; }
+    main .botonVolverArriba svg {
+      order: 2;
+      margin: auto 0; }
+    main .botonVolverArriba p {
+      order: 1;
+      width: 80px;
+      font-weight: 700; }
   main h3:last-of-type {
     padding-bottom: 20px; }
   main .contenedorBienvenidaMain {
@@ -498,7 +526,7 @@ main {
     padding-top: 10px;
     border-radius: 15px;
     margin: 20px 0 0 0;
-    background-color: #c73d3d; }
+    background-color: rgba(46, 167, 223, 0.39); }
     main .contenedorInfoMain .contenedorTecnologias {
       padding-top: 10px;
       display: grid;

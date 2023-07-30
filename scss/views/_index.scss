@@ -65,10 +65,36 @@
 }
 
 main {
+
     margin: 20px !important;
     border-radius: 15px;
 
     justify-content: center;
+
+    .botonVolverArriba {
+        position: fixed;
+        top: 85%;
+        right: 5%;
+        z-index: 9;
+        text-decoration: none;
+        display: flex;
+        background-color: $colorTerciario;
+        border-radius: 15px;
+        box-shadow: 0 0 10px $colorSecundarioTraslucido;
+        padding: 15px;
+        svg {
+            order: 2;
+            margin: auto 0;
+        }
+
+        p {
+            order: 1;
+            width: 80px;
+            font-weight: 700;
+        }
+        color: $colorSecundario;
+        
+    }
 
     h3:last-of-type {
         padding-bottom: 20px;
@@ -135,7 +161,7 @@ main {
         padding-top: 10px;
         border-radius: 15px;
         margin: 20px 0 0 0;
-        background-color: $colorTerciario;
+        background-color: $colorPrimarioTraslucido;
 
         .contenedorTecnologias {
             padding-top: 10px;
